@@ -1,0 +1,19 @@
+testTabSetEquality: function (a, b) {
+  	var compare = function (c, d) { //Order is important.  No need to do any out-of-order searching.  If it's out of order, return false.
+			if(!c || !d) return false;
+			var i = c.length;
+			if (i !== d.length) { return false; }
+			while (i--) {
+				if (c[i].label !== d[i].label) { return false; }
+				if (c[i].tileName) {
+					if (c[i].tileName !== d[i].tileName) { return false; }
+				} else {
+					if (c[i].id !== d[i].id) { return false; }
+				}
+			}
+			return true;
+		};
+		if (!compare(a.main, b.main)) { return false; }
+		if (!compare(a.more, b.more)) { return false; }
+		return true;
+	}
