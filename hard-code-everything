@@ -1,0 +1,13 @@
+//  Always hard code your values.  Text strings are your friends.
+
+var listElem = li.getParent('ul');
+var listItm = new Element('li', {'class': 'spacer'});
+
+if(li.hasClass("required-big-spacer")){
+	listItm.setStyle('height', '135px');
+} else if(li.hasClass("required-medium-spacer")) {
+	listItm.setStyle('height', '80px');
+}  else if(li.hasClass("required-small-spacer")) {
+	listItm.setStyle('height', '25px');
+}
+listItm.inject(listElem); 
