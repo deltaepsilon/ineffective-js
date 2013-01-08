@@ -1,0 +1,7 @@
+//  Use window resize events as a clever event bus.
+
+this.eventmgr.addEvent('activeTabChange', handleTabChange);
+
+handleTabChange = function () {
+  	$(window).fireEvent('resize'); //Customize Tabs needs this resize to recalc its max tab width
+}
