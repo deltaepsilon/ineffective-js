@@ -1,0 +1,6 @@
+<ui:script>
+  	Kamino.EventBus.addEvent('recalled', function(){
+			Kamino.Widget.require('TabPanel').updateBadge('tab-<%=MyWorkTiles.LIST_MYWORK_MYSUBMITTEDAPPROVALS%>', -1);
+			Kamino.Widget.require('TabPanel').updateBadge('tab-<%=MyWorkTiles.TABS_MYWORK_APPROVALS%>', -1);
+		});
+</ui:script>
