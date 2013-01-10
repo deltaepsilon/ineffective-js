@@ -1,4 +1,4 @@
-//JSP's are the best
+<%--JSPs are the best--%>
 <ui:script>
   	Kamino.EventBus.addEvent('recalled', function(){
 			Kamino.Widget.require('TabPanel').updateBadge('tab-<%=MyWorkTiles.LIST_MYWORK_MYSUBMITTEDAPPROVALS%>', -1);
